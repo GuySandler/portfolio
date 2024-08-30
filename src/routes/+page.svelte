@@ -28,12 +28,9 @@
 	}
 	export let PrinterBenchIMG = '../lib/images/printerbench.png';
 
-<<<<<<< Updated upstream
     let background = "";
     $: if(!$DarkTheme){background="#474747";}else{background="white";}
 
-=======
->>>>>>> Stashed changes
 </script>
 
 <svelte:head>
@@ -51,7 +48,6 @@
 			on:outroend={() => ($transitioning = false)}
 		>
 			{#if $page === "home"}
-<<<<<<< Updated upstream
 				<h1>Hi! <br />I'm Guy Sandler</h1>
 				<h2>
 					I am a <span style="color:#cc66ff">14</span> year old
@@ -59,11 +55,11 @@
 					<span style="color:#ff5c33;">San Francisco area</span>
 				</h2>
 				<!-- <div>
-=======
+				<h1>Hi! <br>I'm Guy Sandler</h1>
+				<h2>I am a <span style="color:#cc66ff">14</span> year old programmer from <span style="color:#6699ff;">Israel</span> and I live in the <span style="color:#ff5c33;">Bay Area</span></h2>
 				<h1>Hi! <br>I'm Guy Sandler</h1>
 				<h2>I am a <span style="color:#cc66ff">14</span> year old programmer from <span style="color:#6699ff;">Israel</span> and I live in the <span style="color:#ff5c33;">Bay Area</span></h2>
 				<div>
->>>>>>> Stashed changes
 					<h2>Top Accomplishments</h2>
 					<div class="outer-box">
 						<div class="inner-box">
@@ -76,9 +72,7 @@
 			{:else if $page === "projects"}
 				<div class="project">
 					<div class="imageBG">
-<<<<<<< Updated upstream
 						<img style="width:5vw;aspect-ratio: 1 / 1;" alt="Printerbench" src={logo} class="icon hover1" />
-=======
 						<img
 						style="positionaspect-ratio: 1 / 1;"
 						alt="Printerbench"
@@ -86,7 +80,7 @@
 						class="icon"
 						/>
 						<div class="language"></div>
->>>>>>> Stashed changes
+						<div class="language"></div>
 					</div>
                     <div class="toolUsed">
                         <div style="background-color:#f0947e;z-index:0">
@@ -105,7 +99,6 @@
 					<h2 class="title">PrinterBench</h2>
 					<h3 class="discription">3D printing benchmarks</h3>
 				</div>
-<<<<<<< Updated upstream
             {:else if $page === "skills"}
                 <div class="Skills">
                     <div id="python" style="background-color:#03a1fc;z-index:0">
@@ -203,11 +196,11 @@
             {:else if $page === "award"}
                 <div />
             {/if}
-=======
+				<div class="imageBG">
+				</div>
 				<div class="imageBG">
 				</div>
 			{/if}
->>>>>>> Stashed changes
 		</div>
 	{/key}
 </center>
@@ -360,8 +353,30 @@
         margin-left: 5vw;
         margin-right: 5vw;
     }
-<<<<<<< Updated upstream
+
+    .toolUsed {
+        border: 1px solid black;
+        width: 3vw;
+        height: 3vw;
+        margin-top:10px;
+        overflow:hidden;
+        display: inline-block;
+        border-radius: 5px;
+    }
+    #contact {
+        border: 1px solid black;
+        border-radius: 10px;
+        width: 50%;
+        height: 25%;
+        /* padding-left: 10px;
+        padding-right: 10px; */
+        overflow:hidden;
+    }
+    .row1{
+        display:inline-block;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
 </style>
-=======
+
 </style>
->>>>>>> Stashed changes
