@@ -50,10 +50,12 @@
         border: cornflowerblue 1px solid;
         flex-wrap: nowrap;
         justify-content: center;
+
     }
     #item {
         order: 2;
         width: 100%;
+
     }
     #sidebar {
         order: 1;

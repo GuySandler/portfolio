@@ -6,14 +6,17 @@
     import awards from '../lib/assets/awards.svg';
     import github from '../lib/assets/github.svg';
     import letter from '../lib/assets/letter.svg';
+    import G1 from '../lib/assets/G1.svg';
+    import G2 from '../lib/assets/G2.svg';
 
     let MouseX = 0;
     let MouseY = 0;
     function handleMouseMove(e) {
-        MouseX = e.clientX;
-        MouseY = e.clientY;
+        MouseX = e.clientX-350;
+        MouseY = e.clientY-350;
     }
-    $: angle = Math.atan2(MouseY - 0, MouseX - 0) * (180 / Math.PI); // Assuming element is centered at (150, 150)
+    $: Geffectx = MouseX/50;
+    $: Geffecty = MouseY/50;
 </script>
 
 <svelte:window on:mousemove={handleMouseMove}/>
@@ -21,13 +24,12 @@
 <main>
     <center>
         <div id="container">
-<!--            <div class="item order-1">-->
-<!--                <div id="logoBox">-->
-<!--                    <h1 id="logo" style="transform: rotate3d(0, 0, 1, {angle}deg);">G</h1>-->
-<!--                    <h1 style="color:white;">{MouseX}</h1>-->
-<!--                    <h1 style="color:white;">{MouseY}</h1>-->
-<!--                </div>-->
-<!--            </div>-->
+            <div class="item order-1">
+                <div id="logoBox">
+                    <img style="fill:white;z-index: 1" alt="G" src={G1} />
+                    <img style="position:absolute;z-index: 0;top:{Geffecty}px;left:{Geffectx}px;" alt="G" src={G2} />
+                </div>
+            </div>
             <div class="item order-2">
                 <div id="spacer"></div>
             </div>
@@ -45,7 +47,7 @@
             </div>
             <div class="item order-5">
                 <div id="contact">
-                    <button><img class="image" alt="github" src={github} /></button>
+                    <button><img id="git" style="width:7vh;height:7vh;margin-bottom: 5px;margin-top: 30px" alt="github" src={github} /></button>
                     <button><img class="image" alt="email" src={letter} /></button>
                 </div>
             </div>
@@ -57,35 +59,56 @@
     #container {
         position: absolute;
         display: flex;
-        width: 10%;
-        min-width: 100px;
-        max-width: 100px;
+        /*width: 10%;*/
+        width: 100px;
         height: 99.9vh;
-        border: green 1px solid;
         justify-content: center;
-        flex-flow: column wrap;
-
+        flex-flow: row wrap;
+        overflow-y: scroll;
+        /*overflow-x: hidden;*/
+        background-color: #121212;
+        overflow-x: hidden;
     }
     .item {
         width: 100px;
-        border: purple 1px solid;
-    }
-    #logo {
-        color:white;
-        font-size: xx-large;
+        /*border: purple 1px solid;*/
+        margin-right: auto;
     }
     #spacer {
-        height: 10vh;
-        border: yellow 1px solid;
+        height: 5vh;
     }
     .image {
-        width:5vh;
-        height:5vh;
+        width:7vh;
+        height:7vh;
         margin-bottom: 5px;
         margin-top: 5px;
+        min-height: 100px;
+        /*margin-left: 7px;*/
+    }
+    @keyframes buttonHover {
+         from{transform: translate(0, 0px);}
+         to{transform: translate(0, -10px);}
+     }
+    .image:hover, #git:hover {
+        filter: drop-shadow(0 0 2em #747bff);
+        /*transform: translate(0, -10px);*/
+        animation: 3s ease-in-out 1s 2 reverse both paused buttonHover;
     }
     #menu {
         margin-bottom: 10px;
         margin-top: 10px;
+    }
+    ::-webkit-scrollbar {
+        width: 5px;
+
+    }
+    ::-webkit-scrollbar-track {
+        background: #404040;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
     }
 </style>

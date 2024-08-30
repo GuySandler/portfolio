@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f215c9f-7357-462b-b2b9-ec90a94361b4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/assets/awards.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/assets/cube.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/assets/gear.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/assets/github.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/assets/house.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/assets/info.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/assets/letter.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/+layout.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/OnLoad.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/sidebar.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/assets/G1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/assets/G2.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+layout.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/sidebar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/sidebar.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,23 +43,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Shell Script.SK run.executor": "Run",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/guy/Desktop/VScode/Portfolio/src/lib/assets",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/home/guy/Desktop/VScode/Portfolio/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Shell Script.SK run.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/guy/Desktop/VScode/Portfolio/src/lib/assets&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/guy/Desktop/VScode/Portfolio/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/lib/assets" />
@@ -108,23 +102,13 @@
       <workItem from="1704318523484" duration="8223000" />
       <workItem from="1704335931562" duration="1426000" />
       <workItem from="1704415850858" duration="14533000" />
-      <workItem from="1704480486393" duration="20985000" />
+      <workItem from="1704480486393" duration="24520000" />
+      <workItem from="1705712404596" duration="4503000" />
+      <workItem from="1708827805467" duration="7441000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/routes/sidebar.svelte</url>
-          <line>85</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
