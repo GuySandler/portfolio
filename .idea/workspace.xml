@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f215c9f-7357-462b-b2b9-ec90a94361b4" name="Changes" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/lib/assets/G1.svg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/lib/assets/G2.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+layout.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+page.svelte" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+>>>>>>> 09d6a3afe914a79946c5f8471b4e18e099ef2bc9
       <change beforePath="$PROJECT_DIR$/src/routes/sidebar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/sidebar.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +49,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -58,6 +65,23 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/home/guy/Desktop/VScode/Portfolio/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Shell Script.SK run.executor": "Run",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/guy/Desktop/Vscode/Portfolio2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/home/guy/Desktop/Vscode/Portfolio2/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> 09d6a3afe914a79946c5f8471b4e18e099ef2bc9
   }
 }</component>
   <component name="RecentsManager">
@@ -70,7 +94,7 @@
       <recent name="$PROJECT_DIR$/src/lib" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Shell Script.SK run">
     <configuration name="SK run" type="ShConfigurationType">
       <option name="SCRIPT_TEXT" value="npm run dev" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
@@ -86,6 +110,21 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -102,9 +141,14 @@
       <workItem from="1704318523484" duration="8223000" />
       <workItem from="1704335931562" duration="1426000" />
       <workItem from="1704415850858" duration="14533000" />
+<<<<<<< HEAD
       <workItem from="1704480486393" duration="24520000" />
       <workItem from="1705712404596" duration="4503000" />
       <workItem from="1708827805467" duration="7441000" />
+=======
+      <workItem from="1704480486393" duration="20985000" />
+      <workItem from="1704832173719" duration="4054000" />
+>>>>>>> 09d6a3afe914a79946c5f8471b4e18e099ef2bc9
     </task>
     <servers />
   </component>
