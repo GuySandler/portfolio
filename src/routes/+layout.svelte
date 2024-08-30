@@ -1,41 +1,62 @@
 <script>
-    import Navbar from './navbar.svelte';
-    // import Bottom from './footer.svelte';
-	import './styles.css';
+    import "../app.css";
+    import Sidebar from "./sidebar.svelte"
+    import OnLoad from "./OnLoad.svelte"
+
+    import { onMount } from 'svelte';
+
+    let showOpening = true;
+    let RunAnimation = false;
+    onMount(() => {
+        RunAnimation = true;
+        setTimeout(HideOnLoad, 5001);
+    });
+    function HideOnLoad() {
+        showOpening = false;
+    }
+
 </script>
+<main>
+    {#if showOpening}
+        <OnLoad prop={RunAnimation} />
+    {/if}
+    {#if !showOpening}
+        <div id="container">
+            <div id="sidebar">
+                <Sidebar />
+            </div>
+            <div id="item">
+                <slot />
+            </div>
+        </div>
 
-<div class="app">
-	<nav>
-		<Navbar />
-	</nav>
-	<main>
-		<slot />
-	</main>
-    <!-- <footer>
-        <Bottom />
-    </footer> -->
-</div>
-
+    {/if}
+</main>
 <style>
-    /* :root {
-        background-color: #474747;
-    } */
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-		font-family: ubuntu;
-        /* background-color: #474747; */
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
+    main {
+        /*position:absolute;*/
+        /*top:-21px;*/
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        overflow: hidden;
+        font-family: ubuntu;
+    }
+    :global(body) {margin: 0; padding: 0;}
+    #container {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        border: cornflowerblue 1px solid;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    #item {
+        order: 2;
+        width: 100%;
+    }
+    #sidebar {
+        order: 1;
+        width: 100px;
+    }
 </style>
