@@ -28,6 +28,12 @@
 	}
 	export let PrinterBenchIMG = '../lib/images/printerbench.png';
 
+<<<<<<< Updated upstream
+    let background = "";
+    $: if(!$DarkTheme){background="#474747";}else{background="white";}
+
+=======
+>>>>>>> Stashed changes
 </script>
 
 <svelte:head>
@@ -45,9 +51,19 @@
 			on:outroend={() => ($transitioning = false)}
 		>
 			{#if $page === "home"}
+<<<<<<< Updated upstream
+				<h1>Hi! <br />I'm Guy Sandler</h1>
+				<h2>
+					I am a <span style="color:#cc66ff">14</span> year old
+					programmer from the
+					<span style="color:#ff5c33;">San Francisco area</span>
+				</h2>
+				<!-- <div>
+=======
 				<h1>Hi! <br>I'm Guy Sandler</h1>
 				<h2>I am a <span style="color:#cc66ff">14</span> year old programmer from <span style="color:#6699ff;">Israel</span> and I live in the <span style="color:#ff5c33;">Bay Area</span></h2>
 				<div>
+>>>>>>> Stashed changes
 					<h2>Top Accomplishments</h2>
 					<div class="outer-box">
 						<div class="inner-box">
@@ -60,6 +76,9 @@
 			{:else if $page === "projects"}
 				<div class="project">
 					<div class="imageBG">
+<<<<<<< Updated upstream
+						<img style="width:5vw;aspect-ratio: 1 / 1;" alt="Printerbench" src={logo} class="icon hover1" />
+=======
 						<img
 						style="positionaspect-ratio: 1 / 1;"
 						alt="Printerbench"
@@ -67,6 +86,7 @@
 						class="icon"
 						/>
 						<div class="language"></div>
+>>>>>>> Stashed changes
 					</div>
                     <div class="toolUsed">
                         <div style="background-color:#f0947e;z-index:0">
@@ -85,9 +105,109 @@
 					<h2 class="title">PrinterBench</h2>
 					<h3 class="discription">3D printing benchmarks</h3>
 				</div>
+<<<<<<< Updated upstream
+            {:else if $page === "skills"}
+                <div class="Skills">
+                    <div id="python" style="background-color:#03a1fc;z-index:0">
+                        <div on:mouseenter={hovered1On} on:mouseleave={hovered1Off} class="hover1 area">
+                            <img src="{python}" style="width:100%;aspect-ratio:1/1;" alt="python icon">
+                        </div>
+                        {#if hovered1}
+                            <h2 in:fade|global={{ duration: 750 }} out:fly|global={{ duration: 750 }} style="position:relative;top:-20%;left:-15%;z-index:-1;">Python</h2>
+                        {/if}
+                    </div>
+                    <div id="html" style="background-color:#f0947e;z-index:0">
+                        <div on:mouseenter={hovered2On} on:mouseleave={hovered2Off} class="hover1 area">
+                            <img src="{html}" style="width:100%;aspect-ratio:1/1;" alt="html icon">
+                        </div>
+                        {#if hovered2}
+                            <h2 in:fade|global={{ duration: 750 }} out:fly|global={{ duration: 750 }} style="position:relative;top:-20%;left:-25%;z-index:-1;">html</h2>
+                        {/if}
+                    </div>
+                    <div id="css" style="background-color:#427CBD;z-index:0">
+                        <div on:mouseenter={hovered3On} on:mouseleave={hovered3Off} class="hover1 area">
+                            <img src="{css}" style="width:100%;aspect-ratio:1/1;" alt="css icon">
+                        </div>
+                        {#if hovered3}
+                            <h2 in:fade|global={{ duration: 750 }} out:fly|global={{ duration: 750 }} style="position:relative;top:-20%;left:-32%;z-index:-1;">css</h2>
+                        {/if}
+                    </div>
+                    <div id="js" style="background-color:#FFFF44;z-index:0">
+                        <div on:mouseenter={hovered4On} on:mouseleave={hovered4Off} class="hover1 area">
+                            <img src="{js}" style="width:100%;aspect-ratio:1/1;" alt="js icon">
+                        </div>
+                        {#if hovered4}
+                            <h2 in:fade|global={{ duration: 750 }} out:fly|global={{ duration: 750 }} style="position:relative;top:-20%;left:-3%;z-index:-1;">javascript</h2>
+                        {/if}
+                    </div>
+                    <div id="ts" style="background-color:#398DE1;z-index:0">
+                        <div on:mouseenter={hovered5On} on:mouseleave={hovered5Off} class="hover1 area">
+                            <img src="{ts}" style="width:100%;aspect-ratio:1/1;" alt="ts icon">
+                        </div>
+                        {#if hovered5}
+                            <h2 in:fade|global={{ duration: 750 }} out:fly|global={{ duration: 750 }} style="position:relative;top:-20%;left:-2%;z-index:-1;">typescript</h2>
+                        {/if}
+                    </div>
+                    <div id="firebase" style="background-color:#FFD95B;z-index:0">
+                        <div on:mouseenter={hovered6On} on:mouseleave={hovered6Off} class="hover1 area">
+                            <img src="{firebase}" style="width:100%;aspect-ratio:1/1;" alt="firebase icon">
+                        </div>
+                        {#if hovered6}
+                            <h2 in:fade|global={{ duration: 750 }} out:fly|global={{ duration: 750 }} style="position:relative;top:-20%;left:-10%;z-index:-1;">firebase</h2>
+                        {/if}
+                    </div>
+                    <div id="git" style="background-color:#FF9271;z-index:0">
+                        <div on:mouseenter={hovered7On} on:mouseleave={hovered7Off} class="hover1 area">
+                            <img src="{git}" style="width:100%;aspect-ratio:1/1;" alt="git icon">
+                        </div>
+                        {#if hovered7}
+                            <h2 in:fade|global={{ duration: 750 }} out:fly|global={{ duration: 750 }} style="position:relative;top:-20%;left:-33%;z-index:-1;">git</h2>
+                        {/if}
+                    </div>
+                    <div id="bash" style="background-color:#A3A3A3;z-index:0">
+                        <div on:mouseenter={hovered8On} on:mouseleave={hovered8Off} class="hover1 area">
+                            <img src="{bash}" style="width:100%;aspect-ratio:1/1;" alt="bash icon">
+                        </div>
+                        {#if hovered8}
+                            <h2 in:fade|global={{ duration: 750 }} out:fly|global={{ duration: 750 }} style="position:relative;top:-20%;left:-24%;z-index:-1;">bash</h2>
+                        {/if}
+                    </div>
+                    <div id="svelte" style="background-color:#f0947e;z-index:0">
+                        <div on:mouseenter={hovered9On} on:mouseleave={hovered9Off} class="hover1 area">
+                            <img src="{svelte}" style="width:100%;aspect-ratio:1/1;" alt="svelte icon">
+                        </div>
+                        {#if hovered9}
+                            <h2 in:fade|global={{ duration: 750 }} out:fly|global={{ duration: 750 }} style="position:relative;top:-20%;left:-5%;z-index:-1;">svelte/kit</h2>
+                        {/if}
+                    </div>
+                </div>
+            {:else if $page === "contact"}
+                <div id="contact">
+                    <div class="row1">
+                        <h1>1</h1>
+                    </div>
+                    <div class="row1">
+                        <h1>1</h1>
+                    </div>
+                    <div class="row1">
+                        <h1>1</h1>
+                    </div>
+                    <br>
+                    <div class="row1">
+                        <h1>1</h1>
+                    </div>
+                    <div class="row1">
+                        <h1>1</h1>
+                    </div>
+                </div>
+            {:else if $page === "award"}
+                <div />
+            {/if}
+=======
 				<div class="imageBG">
 				</div>
 			{/if}
+>>>>>>> Stashed changes
 		</div>
 	{/key}
 </center>
@@ -240,4 +360,8 @@
         margin-left: 5vw;
         margin-right: 5vw;
     }
+<<<<<<< Updated upstream
 </style>
+=======
+</style>
+>>>>>>> Stashed changes
