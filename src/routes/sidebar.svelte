@@ -40,10 +40,10 @@
         </div>
     {/if}
     <center>
-        <div id="container" class="md:flex sh:overflow-y-auto">
+        <div id="container" style="background: linear-gradient({(MouseY-50)/8}deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);" class="md:flex sh:overflow-y-auto">
             <div class="item order-1">
                 <div id="logoBox">
-                    <img style="fill:white;z-index: 1" alt="G" src={G1} />
+                    <img style="z-index: 1" alt="G" src={G1} />
                     <img
                         style="position:absolute;z-index: 0;top:{Geffecty}px;left:{Geffectx}px;"
                         alt="G"
@@ -59,17 +59,11 @@
                             class="image-button">
                         <img class="image" alt="home" src={house} />
                     </button>
-                    <button on:mouseenter={() => {buttonMenu = true;buttonMenuTxt = "Projects"}}
+                    <button on:mouseenter={() => {buttonMenu = true;buttonMenuTxt = "Projects & Skills"}}
                             on:mouseleave={() => {buttonMenu = false;}}
                             on:click={() => {page.set(1);}}
                             class="image-button">
                         <img class="image" alt="projects" src={cube} />
-                    </button>
-                    <button on:mouseenter={() => {buttonMenu = true;buttonMenuTxt = "Skills"}}
-                            on:mouseleave={() => {buttonMenu = false;}}
-                            on:click={() => {page.set(2);}}
-                            class="image-button">
-                        <img class="image" alt="skills" src={gear} />
                     </button>
                     <button on:mouseenter={() => {buttonMenu = true;buttonMenuTxt = "About Me"}}
                             on:mouseleave={() => {buttonMenu = false;}}
@@ -107,7 +101,7 @@
     #container {
         position: absolute;
         display: flex;
-        width: 100px;
+        width: 75px;
         height: 99.9vh;
         flex-flow: row wrap;
         overflow-y: scroll;

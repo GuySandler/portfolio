@@ -3,20 +3,22 @@
     import Sidebar from "./sidebar.svelte"
     import OnLoad from "./OnLoad.svelte"
     import MainPage from "./MainPage.svelte";
-    import Projects from "./Projects.svelte";
+    import ProjectsAndSkills from "./ProjectsAndSkills.svelte";
 
     import { onMount } from 'svelte';
     import {page} from '../stores.js';
-    // import { fade } from 'svelte/transition';
+
 
     let showOpening = true;
     let RunAnimation = false;
     onMount(() => {
+        page.set(-1)
         RunAnimation = true;
         setTimeout(HideOnLoad, 5001);
     });
     function HideOnLoad() {
         showOpening = false;
+        setTimeout(function(){page.set(0)}, 150)
     }
 
     let pageNum = 0;
@@ -37,14 +39,14 @@
             </div>
             <div id="item">
                 {#if pageNum == 0}
-<!--                    <div transition:fade>-->
-                    <MainPage/>
-<!--                    </div>-->
+                    <div>
+                        <MainPage/>
+                    </div>
                 {/if}
                 {#if pageNum == 1}
-<!--                    <div transition:fade>-->
-                    <Projects />
-<!--                    </div>-->
+                    <div>
+                        <ProjectsAndSkills />
+                    </div>
                 {/if}
             </div>
         </div>
@@ -59,12 +61,13 @@
         background-color: black;
         overflow: hidden;
         font-family: ubuntu;
+        font-weight: bold;
     }
     :global(body) {margin: 0; padding: 0;}
     #container {
         display: flex;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         border: cornflowerblue 1px solid;
         flex-wrap: nowrap;
         justify-content: center;
@@ -77,6 +80,6 @@
     }
     #sidebar {
         order: 1;
-        width: 100px;
+        width: 75px;
     }
 </style>
