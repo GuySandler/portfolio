@@ -1,18 +1,27 @@
 <script>
     import { fly } from 'svelte/transition';
-    const Skills = ["Svelte/kit","Python"];
-    const SkillPic = ["/src","/src2"];
+
+    import svelte from '../lib/assets/svelte.svg';
+    import python from '../lib/assets/python.svg';
+
+    const skills = [
+        { id: 'Svelte/kit', name: svelte },
+        { id: 'Python', name: python },
+    ];
 </script>
 <div id="body">
     <center>
         <div in:fly={{ y: -100, duration: 1500, delay: 250 }} id="skills">
             <h1 style="float:left;font-size:3.5vh">My Skills (click to filter projects and learn more)</h1>
             <div id="skillbox">
-                {#each Skills as skills, SkillPic as pic, i}
-                    <div class="skill">
-                        <h1>{skills}</h1>
-                        <h1>{pic}</h1>
-                    </div>
+                {#each skills as { id, name }, i}
+                    <button class="skill">
+                        <div id="background" style="display: flex;padding:2px;border-radius:7px;background-color: cyan;background-size: 200% 200%;">
+                            <img src="{name}" alt="{id}" style="border-radius:4px;width:50%;height:50%;line-height: 1;">
+                            <h1 style="">{id}</h1>
+                        </div>
+
+                    </button>
                 {/each}
             </div>
         </div>
@@ -47,12 +56,11 @@
         color:white;
     }
     #skillbox {
-        height:100px;
-
+        height:300px;
         border: yellow 1px solid;
         padding: 5%;
         box-sizing: border-box;
-        margin-top:30px;
+        margin-top:5vh;
         margin-bottom: 10px;
     }
     .skill {
@@ -60,7 +68,22 @@
         width: 100px;
         height: 100px;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        /*align-items: center;*/
+        /*justify-content: center;*/
+        margin: 5px
+    }
+    @keyframes SkillHover {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    #background {
+        width:100%;
+        height:100%;
+    }
+    #background:hover {
+        background: linear-gradient(45deg, #00ffff, #006fff);
+        animation: SkillHover 4s infinite linear;
+
     }
 </style>
