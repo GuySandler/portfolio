@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import { fly } from 'svelte/transition';
     import {page} from "../stores.js"
 
@@ -134,20 +134,13 @@
         padding: 0;
         margin-bottom: 35px;
         margin-top: 35px;
-    }
-    @keyframes buttonClick {
-        from {
-            transform: translateY(0);
-            transform: scale(1);
-        }
-        to {
-            transform: translateY(5px);
-            transform: scale(1.2);
-        }
+        transition: scale ease-in-out 250ms;
     }
     .image-button:hover {
         /*box-shadow: 0 5px 15px rgba(145, 92, 182, .4);*/
         filter: drop-shadow(0px 0px 15px white);
+        /*translate: 0 -5px;*/
+        scale: 1.2;
     }
     .image-button:active {
         filter: drop-shadow(0 0 2em #747bff);

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     // let oceanGradiantDeg = 0;
     // function oceanGradiant(){
     //     if(oceanGradiantDeg != 359){oceanGradiantDeg++;}

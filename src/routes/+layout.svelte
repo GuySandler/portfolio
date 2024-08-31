@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import "../app.css";
     import Sidebar from "./sidebar.svelte"
     import OnLoad from "./OnLoad.svelte"
@@ -7,6 +7,13 @@
 
     import { onMount } from 'svelte';
     import {page} from '../stores.js';
+    import svelte from "$lib/assets/svelte.svg";
+    import python from "$lib/assets/python.svg";
+    import Css from "$lib/assets/css.svg";
+    import Html from "$lib/assets/html.svg";
+    import Firebase from "$lib/assets/firebase.svg";
+    import Javascript from "$lib/assets/javascript.svg";
+    import Typescript from "$lib/assets/typescript.svg";
 
 
     let showOpening = true;
@@ -25,6 +32,41 @@
     page.subscribe((value) => {
         pageNum = value;
     });
+
+    type skillType = {
+        name: string;
+        img: object;
+        badge: boolean;
+        learning: boolean;
+    };
+    const skills: skillType = [
+        { name: 'Svelte/kit', img: svelte, badge: true, learning: false },
+        { name: 'Python', img: python, badge: true, learning: false },
+        { name: 'Css', img: Css, badge: true, learning: false },
+        { name: 'Html', img: Html, badge: true, learning: false },
+        { name: 'Typescript', img: Typescript, badge: true, learning: false },
+
+        { name: 'Firebase', img: Firebase, badge: false, learning: false },
+        { name: 'Javascript', img: Javascript, badge: false, learning: false },
+    //     rust
+    //     c++
+    //     golang
+    //     maybe separate libs from langs
+    ];
+    let cooltransition = [];
+    function noRepeatRandom() {
+        let list = [];
+        for (let i = 0; i < skills.length; i++) {
+            let num = Math.floor(Math.random() * skills.length) + 1
+            while (list.includes(num)) {
+                num = Math.floor(Math.random() * skills.length) + 1
+            }
+            list.push(num)
+            cooltransition.push(num)
+            // console.log(cooltransition)
+        }
+    }
+    noRepeatRandom()
 
 </script>
 <main>
@@ -45,7 +87,7 @@
                 {/if}
                 {#if pageNum == 1}
                     <div>
-                        <ProjectsAndSkills />
+                        <ProjectsAndSkills cooltransition={cooltransition} skills={skills}/>
                     </div>
                 {/if}
             </div>
