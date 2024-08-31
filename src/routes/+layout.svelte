@@ -2,8 +2,12 @@
     import "../app.css";
     import Sidebar from "./sidebar.svelte"
     import OnLoad from "./OnLoad.svelte"
+    import MainPage from "./MainPage.svelte";
+    import Projects from "./Projects.svelte";
 
     import { onMount } from 'svelte';
+    import {page} from '../stores.js';
+    // import { fade } from 'svelte/transition';
 
     let showOpening = true;
     let RunAnimation = false;
@@ -15,8 +19,14 @@
         showOpening = false;
     }
 
+    let pageNum = 0;
+    page.subscribe((value) => {
+        pageNum = value;
+    });
+
 </script>
 <main>
+    <slot/>
     {#if showOpening}
         <OnLoad prop={RunAnimation} />
     {/if}
@@ -26,10 +36,18 @@
                 <Sidebar />
             </div>
             <div id="item">
-                <slot />
+                {#if pageNum == 0}
+<!--                    <div transition:fade>-->
+                    <MainPage/>
+<!--                    </div>-->
+                {/if}
+                {#if pageNum == 1}
+<!--                    <div transition:fade>-->
+                    <Projects />
+<!--                    </div>-->
+                {/if}
             </div>
         </div>
-
     {/if}
 </main>
 <style>
